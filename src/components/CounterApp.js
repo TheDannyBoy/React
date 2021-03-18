@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const CounterApp = ({ initialValue }) => {
 
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(initialValue);
 
   const handleReset = () => setCounter(initialValue);
   const handleClick = () => setCounter( count => count + 1);
@@ -25,7 +25,7 @@ CounterApp.propTypes = {
 }
 
 CounterApp.defaultProps = {
-  initialValue: 0,
+  initialValue: 10,
 }
 
 export default CounterApp;
